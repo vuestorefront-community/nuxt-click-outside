@@ -28,7 +28,7 @@
 
 You can contribute to this module online with CodeSandBox:
 
-[![Edit @nuxtjs/color-mode](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/vuestorefront-community/nuxt-click-outside/tree/main/?fontsize=14&hidenavigation=1&theme=dark)
+[![Edit @vuestorefront-community/nuxt-click-outside](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/vuestorefront-community/nuxt-click-outside/tree/main/?fontsize=14&hidenavigation=1&theme=dark)
 
 Or locally:
 
