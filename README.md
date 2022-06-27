@@ -40,7 +40,7 @@ Or locally:
 
 [MIT License](./LICENSE)
 
-Copyright (c) Nuxt Team
+Copyright (c) Vue Storefront
 
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/@vuestorefront-community/nuxt-click-outside/latest.svg
