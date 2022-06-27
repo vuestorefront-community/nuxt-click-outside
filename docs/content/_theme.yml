@@ -1,0 +1,34 @@
+title: Nuxt Click Outside
+
+layout: docs
+
+url: ""
+
+description: "Directive to check if it was clicked outside the element"
+
+socials:
+  twitter: "vuestorefront"
+  github: "vuestorefront-community/nuxt-click-outside"
+
+debug: false
+
+github:
+  root: docs/content
+  edit: true
+  releases: true
+
+aside:
+  level: 1
+
+header:
+  title: false
+  logo: true
+
+footer:
+  credits:
+    icon: IconDocus
+    text: Powered by Docus
+    href: https://docus.com
+  icons:
+  - label: Vue Storefront
+    href: https://vuestorefront.io

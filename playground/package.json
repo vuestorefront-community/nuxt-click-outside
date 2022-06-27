@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "name": "my-module-playground",
+  "dependencies": {
+    "@vuestorefront-community/nuxt-click-outside": "file:../"
+  }
+}

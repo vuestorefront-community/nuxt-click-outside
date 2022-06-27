@@ -1,0 +1,19 @@
+{
+  "name": "nuxt-click-outside",
+  "version": "1.0.0",
+  "description": "Directive to check if it was clicked outside the element",
+  "homepage": "https://color-mode.nuxtjs.org/",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi build",
+    "preview": "nuxi preview"
+  },
+  "devDependencies": {
+    "@docus/docs-theme": "npm:@docus/docs-theme-edge@latest",
+    "@docus/github": "npm:@docus/github-edge@latest",
+    "nuxt": "^3.0.0-rc.3",
+    "vue-plausible": "^1.3.1"
+  }
+}

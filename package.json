@@ -1,0 +1,87 @@
+{
+  "name": "@vuestorefront-community/nuxt-click-outside",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "repository": "vuestorefront-community/nuxt-click-outside",
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "author": {
+    "email": "heitor.ramon@gmail.com",
+    "name": "Heitor Ramon Ribeiro",
+    "url": "https://heitor.co"
+  },
+  "scripts": {
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground && cd playground && npm i",
+    "docs:build": "cd docs && nuxi build",
+    "docs:dev": "cd docs && nuxi dev",
+    "docs:generate": "cd docs && nuxi build",
+    "docs:prepare": "cd docs && npm i",
+    "docs:preview": "cd docs && nuxi preview",
+    "precommit": "lint-staged",
+    "prepack": "nuxt-module-build",
+    "prepare": "husky install",
+    "release": "yarn test && standard-version && git push --follow-tags && npm publish",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:unit": "vitest"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.0.0-rc.4",
+    "pathe": "^0.3.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.1",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@nuxt/module-builder": "latest",
+    "@nuxt/schema": "^3.0.0-rc.3",
+    "@nuxtjs/eslint-config-typescript": "^10.0.0",
+    "@types/lodash.template": "^4.5.0",
+    "@types/node": "^18.0.0",
+    "@types/prettier": "^2.6.3",
+    "@typescript-eslint/parser": "^5.27.0",
+    "@vue-storefront/eslint-config-nuxt": "^1.0.11",
+    "@vue/test-utils": "^2.0.0",
+    "babel-jest": "^28.1.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "latest",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "nuxt": "^3.0.0-rc.4",
+    "prettier": "^2.7.1",
+    "standard-version": "^9.5.0",
+    "typescript": "^4.7.4",
+    "vitest": "^0.16.0"
+  },
+  "lint-staged": {
+    "*.{js,ts}": "eslint --cache --fix"
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

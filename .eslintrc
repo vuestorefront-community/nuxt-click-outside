@@ -1,0 +1,22 @@
+{
+  "root": true,
+  "extends": [
+    "@vue-storefront/eslint-config-nuxt"
+  ],
+  "parserOptions": {
+    "project": [
+      "tsconfig.json",
+      "playground/.nuxt/tsconfig.json"
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": [
+          "playground/.nuxt/tsconfig.json",
+          "tsconfig.json"
+        ]
+      }
+    }
+  }
+}
