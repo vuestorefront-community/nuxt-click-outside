@@ -115,7 +115,6 @@ const directive = {
   updated,
   unmounted,
   getSSRProps: (_binding, _vnode) => ({}),
-  deep: true,
 };
 
 export { directive, name };
