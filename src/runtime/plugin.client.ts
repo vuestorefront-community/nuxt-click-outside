@@ -1,6 +1,6 @@
 import { defineNuxtPlugin } from '#app';
-import VClickOutside from './directive';
+import { directive, name } from './directive';
 
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.vueApp.use(VClickOutside);
+  nuxtApp.vueApp.directive(name, directive);
 });

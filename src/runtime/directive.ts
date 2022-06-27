@@ -6,6 +6,8 @@ const IS_TOUCH =
   ('ontouchstart' in window || (HAS_NAVIGATOR && navigator.maxTouchPoints > 0));
 const EVENTS = IS_TOUCH ? ['touchstart'] : ['click'];
 
+const name = 'click-outside';
+
 function processDirectiveArguments(bindingValue) {
   const isFunction = typeof bindingValue === 'function';
   if (!isFunction && typeof bindingValue !== 'object') {
@@ -104,27 +106,28 @@ function unmounted(el, { value, oldValue }) {
     return;
   }
 
-  unbind(el);
-  bind(el, { value });
+  unmounted(el, { value, oldValue });
+  mounted(el, { value });
 }
 
 const directive = {
   mounted,
   updated,
   unmounted,
-  getSSRProps: () => [],
+  getSSRProps: (binding, vnode) => ({}),
+  deep: true,
 };
 
 const plugin = {
   install: (app) => {
-    app.directive('click-outside', directive);
+    app.directive(name, directive);
   },
 };
 
 const mixin = {
-  directives: { 'click-outside': directive },
+  directives: { [name]: directive },
 };
 
-export { directive, mixin };
+export { directive, mixin, name };
 
 export default plugin;
