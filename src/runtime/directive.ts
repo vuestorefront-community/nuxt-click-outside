@@ -114,20 +114,8 @@ const directive = {
   mounted,
   updated,
   unmounted,
-  getSSRProps: (binding, vnode) => ({}),
+  getSSRProps: (_binding, _vnode) => ({}),
   deep: true,
 };
 
-const plugin = {
-  install: (app) => {
-    app.directive(name, directive);
-  },
-};
-
-const mixin = {
-  directives: { [name]: directive },
-};
-
-export { directive, mixin, name };
-
-export default plugin;
+export { directive, name };
