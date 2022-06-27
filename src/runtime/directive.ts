@@ -20,7 +20,7 @@ function processDirectiveArguments(bindingValue) {
     handler: isFunction ? bindingValue : bindingValue.handler,
     middleware: bindingValue.middleware || ((item) => item),
     events: bindingValue.events || EVENTS,
-    isActive: !(bindingValue.isActive === false),
+    active: !(bindingValue.active === false),
     detectIframe: !(bindingValue.detectIframe === false),
     capture: !!bindingValue.capture,
   };
@@ -57,9 +57,9 @@ function onEvent({ el, event, handler, middleware }) {
 }
 
 function mounted(el, { value }) {
-  const { events, handler, middleware, isActive, detectIframe, capture } =
+  const { events, handler, middleware, active, detectIframe, capture } =
     processDirectiveArguments(value);
-  if (!isActive) {
+  if (!active) {
     return;
   }
 

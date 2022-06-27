@@ -1,7 +1,7 @@
 {
   "name": "nuxt-click-outside",
   "version": "1.0.0",
-  "description": "Directive to check if it was clicked outside the element",
+  "description": "Check if it is a click or touch event was outside the element",
   "homepage": "https://color-mode.nuxtjs.org/",
   "license": "MIT",
   "scripts": {

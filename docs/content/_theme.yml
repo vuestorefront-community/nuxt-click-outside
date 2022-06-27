@@ -4,7 +4,7 @@ layout: docs
 
 url: ""
 
-description: "Directive to check if it was clicked outside the element"
+description: "Check if it is a click or touch event was outside the element"
 
 socials:
   twitter: "vuestorefront"
@@ -16,6 +16,10 @@ github:
   root: docs/content
   edit: true
   releases: true
+
+cover:
+  src: /cover.png
+  alt: Check if it is a click or touch event was outside the element.
 
 aside:
   level: 1
