@@ -8,14 +8,6 @@ export default defineNuxtModule<{}>({
     configKey: 'clickOutside',
   },
   setup(options, nuxt) {
-    nuxt.options.vue.compilerOptions.directiveTransforms =
-      nuxt.options.vue.compilerOptions.directiveTransforms || {};
-    nuxt.options.vue.compilerOptions.directiveTransforms['click-outside'] =
-      () => ({
-        props: [],
-        needRuntime: true,
-      });
-
     const runtimeDir = fileURLToPath(new URL('runtime', import.meta.url));
 
     addPlugin(resolve(runtimeDir, 'plugin.client'));

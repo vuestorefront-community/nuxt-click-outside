@@ -112,6 +112,7 @@ const directive = {
   mounted,
   updated,
   unmounted,
+  getSSRProps: () => [],
 };
 
 const plugin = {
