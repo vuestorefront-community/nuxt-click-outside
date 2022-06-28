@@ -21,6 +21,6 @@ export default defineNuxtModule({
 
     const runtimeDir = fileURLToPath(new URL('runtime', import.meta.url));
 
-    addPlugin(resolve(runtimeDir, 'plugin.client'));
+    addPlugin(resolve(runtimeDir, 'plugin'));
   },
 });
