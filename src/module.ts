@@ -6,7 +6,7 @@ export default defineNuxtModule({
   meta: {
     name: 'nuxt-click-outside',
   },
-  setup(nuxt) {
+  setup(_options, nuxt) {
     nuxt.options.vue.compilerOptions.directiveTransforms =
       nuxt.options.vue.compilerOptions.directiveTransforms || {};
     nuxt.options.vue.compilerOptions.directiveTransforms['click-outside'] =
